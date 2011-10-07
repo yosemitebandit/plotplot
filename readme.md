@@ -1,9 +1,5 @@
 ## plotplot
-interfacing with the eibot board
-
-
-### EIBot board
-This stepper and servo controller is sold by EMSL, Sparkfun and others.  It is designed by Brian Schmalz of Schmalz Haus. The commands are described here http://www.schmalzhaus.com/EBB/EBBCommands.html
+interfacing with the eibot board; this stepper and servo controller is sold by EMSL, Sparkfun and others.  It is designed by Brian Schmalz of Schmalz Haus. 
 
 ### EMSL steppers
 documented here: http://evilmadscience.com/productsmenu/partsmenu/187-stepper
@@ -11,7 +7,8 @@ documented here: http://evilmadscience.com/productsmenu/partsmenu/187-stepper
 connections to the EIBot board: http://cdn2.evilmadscience.com/im/eggbot/desc/2_800.jpg
 
 
-#### commands
+### Commands
+Fully described here http://www.schmalzhaus.com/EBB/EBBCommands.html
  
  - The most important command seems to be SM; from the docs:
 
@@ -50,6 +47,7 @@ Return Packet: "OK"
 ```
 
 ### Using pyserial
+I found my device ID by watching what changed in `/dev` when I plugged in the board.
 
 ```python
 import serial
@@ -62,4 +60,27 @@ ser.write('EM,5')   # the EM write seems to "eat" the next command.. still puzzl
 ser.write('SM,2000,200\r')
 ```
 
+
+### Maths
+see if this makes sense:
+
+```
+   *                    *  (0,L)
+    \                 /
+     \              /
+      \           /
+   a   \        /   b
+        \     /
+         \  /
+          o
+            (x,y)
+```
+
+so 
+
+```
+  a = sqrt(x^2 + y^2)
+
+  b = sqrt(y^2 + (L-x)^2)
+```
 
