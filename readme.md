@@ -15,6 +15,7 @@ connections to the EIBot board: http://cdn2.evilmadscience.com/im/eggbot/desc/2_
  
  - The most important command seems to be SM; from the docs:
 
+```
 The "SM" Command (stepper motor move)
 Format: "SM,<duration>,<axis1>,<axis2><CR>"
 <duration> is a value from 1 to 65,535 and is in milliseconds. It represents the total length of time you want this move to take. 
@@ -23,10 +24,11 @@ Use this command to make the motors draw a straight line at constant velocity. T
 
 Example: "SM,1000,250,-766"
 Return Packet: "OK"
-
+```
 
  - EM is also rather important for setting the step mode:
 
+```
 The "EM" Command (enable motors) for EBB v1.2 and above
 
 Format: "EM,<Enable1>,<Enable2><CR>"
@@ -45,7 +47,7 @@ Example: "EM,2" - this command will set both motors in 1/8th step mode
 Example: "EM,0,0" - this command will disable both motors (they will then freewheel)
 Example: "EM,1,1" - this command will enable both motors and set them to 1/16th microstep mode.
 Return Packet: "OK"
-
+```
 
 ### Using pyserial
 
