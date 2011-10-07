@@ -1,10 +1,15 @@
 ## plotplot
 interfacing with the eibot board; this stepper and servo controller is sold by EMSL, Sparkfun and others.  It is designed by Brian Schmalz of Schmalz Haus. 
 
+Here's what we're up to: http://tristanperich.com/Art/Machine_Drawings/images/Perich_Tristan_Machine_Drawing_Philoctetes_Small_Process.jpg
+ - see also: http://tristanperich.com/Art/Machine_Drawings/
+ - and: http://www.flickr.com/photos/geekphysical/sets/72157625827981787/with/5407732000/
+
+
 ### EMSL steppers
 documented here: http://evilmadscience.com/productsmenu/partsmenu/187-stepper
 1.8deg/set (200 steps per rotation)
-connections to the EIBot board: http://cdn2.evilmadscience.com/im/eggbot/desc/2_800.jpg
+connections to the EIBot board: http://cdn2.evilmadscience.com/im/eggbot/desc/2_800.jpg (I had brown in place of white)
 
 
 ### Commands
@@ -79,8 +84,17 @@ see if this makes sense:
 so 
 
 ```
-  a = sqrt(x^2 + y^2)
+  a = &radic;(x&sup2; + y&sup2;)
 
-  b = sqrt(y^2 + (L-x)^2)
+  b = &radic;(y&sup2; + (L-x)&sup2;)
 ```
+
+also, with regard to the spinning steppers and our 200 steps per revolution, if ```s``` is the number of steps:
+
+```
+  &Delta;a = r&theta;
+  &theta; = 2s&pi;/200
+  &there4;
+  s = 100&Delta;a/(r&pi;)
+``` 
 
