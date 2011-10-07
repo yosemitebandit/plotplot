@@ -1,9 +1,7 @@
 ## plotplot
 interfacing with the eibot board; this stepper and servo controller is sold by EMSL, Sparkfun and others.  It is designed by Brian Schmalz of Schmalz Haus. 
-
-Here's what we're up to: http://tristanperich.com/Art/Machine_Drawings/images/Perich_Tristan_Machine_Drawing_Philoctetes_Small_Process.jpg
  
- - see also: http://tristanperich.com/Art/Machine_Drawings/
+ - what we're up to: http://tristanperich.com/Art/Machine_Drawings/
  - and: http://www.flickr.com/photos/geekphysical/sets/72157625827981787/with/5407732000/
 
 
@@ -69,6 +67,9 @@ ser.write('SM,2000,200\r')
 
 
 ### Maths
+so keeping in mind that we're making 
+![oh god hot linking](http://tristanperich.com/Art/Machine_Drawings/images/Perich_Tristan_Machine_Drawing_Philoctetes_Small_Process.jpg)
+
 see if this makes sense:
 
 ```
