@@ -67,10 +67,11 @@ ser.write('SM,2000,200\r')
 
 
 ### Maths
-so keeping in mind that we're making 
+so keeping in mind that we're making the same thing as this fellow (Tristan Perich):
+
 ![oh god hot linking](http://tristanperich.com/Art/Machine_Drawings/images/Perich_Tristan_Machine_Drawing_Philoctetes_Small_Process.jpg)
 
-see if this makes sense:
+and see if this makes sense:
 
 ```
    *                    *  (0,L)
