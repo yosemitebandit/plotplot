@@ -74,7 +74,7 @@ so keeping in mind that we're making the same thing as this fellow (Tristan Peri
 and see if this makes sense:
 
 ```
-   *  (0,0)             *  (0,L)
+   *  (0,0)             *  (L,0)
     \                 /
      \              /
       \           /
