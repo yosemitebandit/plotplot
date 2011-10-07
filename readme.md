@@ -84,12 +84,16 @@ see if this makes sense:
 so 
 
   a = &radic;(x&sup2; + y&sup2;)
+  
   b = &radic;(y&sup2; + (L-x)&sup2;)
 
 also, with regard to the spinning steppers and our 200 steps per revolution, if ```s``` is the number of steps:
 
   &Delta;a = r&theta;
+  
   &theta; = 2s&pi;/200
+  
   &there4;
+  
   s = 100&Delta;a/(r&pi;)
 
