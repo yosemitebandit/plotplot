@@ -6,6 +6,25 @@ Here's what we're up to: http://tristanperich.com/Art/Machine_Drawings/images/Pe
  - and: http://www.flickr.com/photos/geekphysical/sets/72157625827981787/with/5407732000/
 
 
+### scripts
+plug in the eibot board and find the device within /dev.  So, in terminal, ```ls /dev```.  Mine was called something
+like 'usbmodemfa141'.  Then, where it says /path/to/usb in the examples below, replace that name with the usb name.
+
+```bounded-random.py``` draws randomly within a bounded box.  usage:
+
+```
+python bounded-random.py /path/to/usb
+```
+
+```listener.py``` responds to up, left, down, right commands
+
+```
+python listener.py /path/to/usb
+```
+
+```layers.py``` progressively thresholds an image
+
+
 ### EMSL steppers
 documented here: http://evilmadscience.com/productsmenu/partsmenu/187-stepper
 1.8deg/set (200 steps per rotation)
