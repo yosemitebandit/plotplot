@@ -3,25 +3,26 @@ interfacing with the eibot board; this stepper and servo controller is sold by E
  
  - what we're up to: http://tristanperich.com/Art/Machine_Drawings/
  - and: http://www.flickr.com/photos/geekphysical/sets/72157625827981787/with/5407732000/
+ - and: http://www.instructables.com/id/Polargraph-Drawing-Machine/?ALLSTEPS
 
 
 ### scripts
-plug in the eibot board and find the device within /dev.  So, in terminal, ```ls /dev```.  Mine was called something
-like 'usbmodemfa141'.  Then, where it says /path/to/usb in the examples below, replace that name with the usb name.
+plug in the eibot board and find the device within /dev.  So, in terminal, `ls /dev`.  Mine was called something
+like `usbmodemfa141`.  Then, where it says /path/to/usb in the examples below, replace that name with the usb name.
 
-```bounded-random.py``` draws randomly within a bounded box.  usage:
+`bounded-random.py` draws randomly within a bounded box.  usage:
 
-```
+`
 python bounded-random.py /path/to/usb
-```
+`
 
-```listener.py``` responds to up, left, down, right commands
+`listener.py` responds to up, left, down, right commands
 
-```
+`
 python listener.py /path/to/usb
-```
+`
 
-```layers.py``` progressively thresholds an image
+`layers.py` progressively thresholds an image
 
 
 ### EMSL steppers
@@ -36,7 +37,7 @@ Fully described here http://www.schmalzhaus.com/EBB/EBBCommands.html
  
  - The most important command seems to be SM; from the docs:
 
-```
+`
 The "SM" Command (stepper motor move)
 Format: "SM,<duration>,<axis1>,<axis2><CR>"
 <duration> is a value from 1 to 65,535 and is in milliseconds. It represents the total length of time you want this move to take. 
@@ -45,11 +46,11 @@ Use this command to make the motors draw a straight line at constant velocity. T
 
 Example: "SM,1000,250,-766"
 Return Packet: "OK"
-```
+`
 
  - EM is also rather important for setting the step mode:
 
-```
+`
 The "EM" Command (enable motors) for EBB v1.2 and above
 
 Format: "EM,<Enable1>,<Enable2><CR>"
@@ -68,7 +69,7 @@ Example: "EM,2" - this command will set both motors in 1/8th step mode
 Example: "EM,0,0" - this command will disable both motors (they will then freewheel)
 Example: "EM,1,1" - this command will enable both motors and set them to 1/16th microstep mode.
 Return Packet: "OK"
-```
+`
 
 ### Using pyserial
 I found my device ID by watching what changed in `/dev` when I plugged in the board.
@@ -92,7 +93,7 @@ so keeping in mind that we're making the same thing as this fellow (Tristan Peri
 
 and see if this makes sense:
 
-```
+`
    *  (0,0)             *  (L,0)
     \                 /
      \              /
@@ -102,7 +103,7 @@ and see if this makes sense:
          \  /
           o
             (x,y)
-```
+`
 
 so 
 
@@ -110,7 +111,7 @@ so
   
   b = &radic;(y&sup2; + (L-x)&sup2;)
 
-also, with regard to the spinning steppers and our 200 steps per revolution, if ```s``` is the number of steps:
+also, with regard to the spinning steppers and our 200 steps per revolution, if `s` is the number of steps:
 
   &Delta;a = r&theta;
   
@@ -120,3 +121,15 @@ also, with regard to the spinning steppers and our 200 steps per revolution, if 
   
   s = 100&Delta;a/(r&pi;)
 
+
+### should fix
+
+ - one big plotting class/lib
+
+### would be nice
+
+ - letters
+ - images
+   - via contours and progressive greyscaling?
+ - simulator
+   - python lib generates paths, saves as json and renders locally?
