@@ -1,7 +1,10 @@
+# moved!
+this project's been cleaned up as 'erik' - see https://github.com/yosemitebandit/erik
+
 ## plotplot
 interfacing with the eibot board; this stepper and servo controller is sold by EMSL, Sparkfun and others.  It is designed by Brian Schmalz of Schmalz Haus. 
  
- - what we're up to: http://tristanperich.com/Art/Machine_Drawings/
+ - what we're up to: `http://tristanperich.com/Art/Machine_Drawings/`
  - and: http://www.flickr.com/photos/geekphysical/sets/72157625827981787/with/5407732000/
  - and: http://www.instructables.com/id/Polargraph-Drawing-Machine/?ALLSTEPS
 
@@ -29,7 +32,7 @@ python listener.py /path/to/usb
 
  - documented here: http://evilmadscience.com/productsmenu/partsmenu/187-stepper
  - 1.8deg/set (200 steps per rotation)
- - connections to the EIBot board: http://cdn2.evilmadscience.com/im/eggbot/desc/2_800.jpg (I had brown in place of white)
+ - connections to the EIBot board: `http://cdn2.evilmadscience.com/im/eggbot/desc/2_800.jpg` (I had brown in place of white)
 
 
 ### Commands
